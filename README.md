@@ -28,7 +28,7 @@ Want more features? You can have more fun with it as well:
 
 **Check out the [Press.css](http://codyo.me/press) to see these features in action.**
 
-###Button Shapes
+###[Button Shapes](http://codyo.me/press/#shapes)
 
 *(default)* - If you do not specify a shape, Press.css will create a squared button.
 
@@ -38,7 +38,7 @@ Want more features? You can have more fun with it as well:
 
 *.press-circle* - Perfect for glyphicons or numbers. Too much content will be hidden.
 
-###Button Sizes
+###[Button Sizes](http://codyo.me/press/#sizes)
 
 *.press-sm* - Equivalent of `font-size:.8em;`
 
@@ -48,7 +48,7 @@ Want more features? You can have more fun with it as well:
 
 *.press-xl* - Equivalent of `font-size:1.5em;`
 
-###Button Effects
+###[Button Effects](http://codyo.me/press/#effects)
 
 *.press-raised* - Adds a slight border-shadow to the button
 
@@ -56,9 +56,9 @@ Want more features? You can have more fun with it as well:
 
 *:disabled* - Press.css uses the disabled attribute on `button` elements.
 
-###Button Colors
+###[Button Colors](http://codyo.me/press/#colors)
 
-Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](https://www.google.com/design/spec/style/color.html) in their style guide are used by default in Press.css.
+Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](http://codyo.me/press/#colors) in their style guide are used by default in Press.css.
 
 **Note:** There is a `.press-yellow` class that defaults to `#FFF` text color. Overwrite this class anywhere below where you add Press.css to make the yellow button have a contrasting color.
 
