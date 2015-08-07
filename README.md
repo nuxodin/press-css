@@ -24,6 +24,12 @@ Want more features? You can have more fun with it as well:
 <button class="press press-bluegrey press-round press-ghost press-xl">Round Button</button>
 ```
 
+You can even use anchor elements to make a link look like a Press.css button:
+
+```
+<a href="#" class="press press-green press-circle">21</a>
+```
+
 ##Features
 
 **Check out the [Press.css](http://codyo.me/press) to see these features in action.**
