@@ -66,7 +66,7 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](http://codyo.me/press/#colors) in their style guide are used by default in Press.css.
 
-**Note:** There is a `.press-yellow` class that defaults to `#FFF` text color. Overwrite this class anywhere below where you add Press.css to make the yellow button have a contrasting color.
+**Note:** There is a `.press-yellow` and a `.press-white` class that defaults to `color: #FFF`. Overwrite this class anywhere below where you add Press.css to give the text a contrasting color.
 
 ##Customizing Press.css
 
