@@ -5,28 +5,28 @@ Press.css is a flat, lightweight, scalable, no bullshit button library for your 
 
 Download Press.css and add a link to the stylesheet in the `head` of your document.
 
-    ```
-    <link rel="stylesheet" href="press.css" />
-    ```
+```html
+<link rel="stylesheet" href="press.css" />
+```
 
 ##The Markup
 
 At the very minimum, press requires two classes, `press` and `press-[color]`, to create a working button.
 
 
-    ```
-    <button class="press press-red">Square Button</button>
-    ```
+```html
+<button class="press press-red">Square Button</button>
+```
 
 Want more features? You can have more fun with it as well:
 
-    ```
-    <button class="press press-bluegrey press-round press-ghost press-xl">Round Button</button>
-    ```
+```html
+<button class="press press-bluegrey press-round press-ghost press-xl">Round Button</button>
+```
 
 You can even use anchor elements to make a link look like a Press.css button:
 
-```
+```html
 <a href="#" class="press press-green press-circle">21</a>
 ```
 
