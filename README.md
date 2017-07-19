@@ -1,7 +1,7 @@
-#Press.css
+# Press.css
 Press.css is a flat, lightweight, scalable, no bullshit button library for your projects that is heavily influenced by [Google's Material Design](https://www.google.com/design/) guidelines. It's markup is simple, easy to use and predictable and helps ensure a uniform button experience across all pages of your site or app.
 
-##Ways to Use
+## Ways to Use
 
 Download Press.css and add a link to the stylesheet in the `head` of your document.
 
@@ -9,7 +9,7 @@ Download Press.css and add a link to the stylesheet in the `head` of your docume
 <link rel="stylesheet" href="press.css" />
 ```
 
-##The Markup
+## The Markup
 
 At the very minimum, press requires two classes, `press` and `press-[color]`, to create a working button.
 
@@ -30,11 +30,11 @@ You can even use anchor elements to make a link look like a Press.css button:
 <a href="#" class="press press-green press-circle">21</a>
 ```
 
-##Features
+## Features
 
 **Check out the [Press.css](http://codyo.me/press) to see these features in action.**
 
-###[Button Shapes](http://codyo.me/press/#shapes)
+### [Button Shapes](http://codyo.me/press/#shapes)
 
 *(default)* - If you do not specify a shape, Press.css will create a squared button.
 
@@ -44,7 +44,7 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *.press-circle* - Perfect for glyphicons or numbers. Too much content will be hidden.
 
-###[Button Sizes](http://codyo.me/press/#sizes)
+### [Button Sizes](http://codyo.me/press/#sizes)
 
 *.press-sm* - Equivalent of `font-size:.8em;`
 
@@ -54,7 +54,7 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *.press-xl* - Equivalent of `font-size:1.5em;`
 
-###[Button Effects](http://codyo.me/press/#effects)
+### [Button Effects](http://codyo.me/press/#effects)
 
 *.press-raised* - Adds a slight border-shadow to the button
 
@@ -62,16 +62,16 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *:disabled* - Press.css uses the disabled attribute on `button` elements.
 
-###[Button Colors](http://codyo.me/press/#colors)
+### [Button Colors](http://codyo.me/press/#colors)
 
 Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](http://codyo.me/press/#colors) in their style guide are used by default in Press.css.
 
 **Note:** There is a `.press-yellow` and a `.press-white` class that defaults to `color: #FFF`. Overwrite this class anywhere below where you add Press.css to give the text a contrasting color.
 
-##Customizing Press.css
+## Customizing Press.css
 
 The SCSS file is pretty straightforward, but I thought I would leaves some quick notes:
 
-###Adding/Removing Colors:
+### Adding/Removing Colors:
 
 The colors are created via a SCSS key/value map, `$colors`. SASS will throw interpolation warnings and errors. To prevent this, always place the key as a string (wrap it in quotes `"`) *especially* if you are using color names used in HTML (e.g. blue, green, red, orange).
