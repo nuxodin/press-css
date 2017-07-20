@@ -1,0 +1,12 @@
+{
+  "name": "press-css",
+  "version": "2.0.0",
+  "description": "A flat, material, no bullshit CSS button library.",
+  "main": "index.js",
+  "repository": "git@github.com:codyogden/press-css.git",
+  "author": "Cody Ogden <cody@codyogden.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
