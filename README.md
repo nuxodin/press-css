@@ -70,11 +70,19 @@ Press.css borrows heavily from the design specs of Google's Material Design. All
 
 ## Adding/Removing Colors
 
-Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property. ([Codepen](https://codepen.io/codyogden/pen/pwXXQG))
+Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property. ([CodePen Demo](https://codepen.io/codyogden/pen/pwXXQG))
 ```css
 .press-love {
 	--p: pink;
         color: red;
+}
+```
+
+As long as the button has the base `.press` class, you can use any CSS selector to extend Press.css and customize a button. [(CodePen Demo)](https://codepen.io/codyogden/pen/eRqgba)
+```css
+.btn-main {
+	--p: #6967AB;
+	color: #FFF;
 }
 ```
 
