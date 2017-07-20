@@ -68,13 +68,9 @@ Press.css borrows heavily from the design specs of Google's Material Design. All
 
 **Note:** There is a `.press-yellow` and a `.press-white` class that defaults to `color: #FFF`. Overwrite this class anywhere below where you add Press.css to give the text a contrasting color.
 
-## Customizing Press.css
+## Adding/Removing Colors
 
-The SCSS file is pretty straightforward, but I thought I would leaves some quick notes:
-
-### Adding/Removing Colors:
-
-Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property. ([Codepen](https://codepen.io/codyogden/pen/pwXXQG))
+Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property. ([CodePen Demo](https://codepen.io/codyogden/pen/pwXXQG))
 ```css
 .press-love {
 	--p: pink;
@@ -82,10 +78,19 @@ Press.css is now extendable without the need for using or compiling with Sass! I
 }
 ```
 
-## Accessibility First
-Now that you can easily add new and custom colors to Press.css, I wanted to ensure that Press.css adheres as close as possible to web accessibility standards. While I was able to keep all the original button colors from the original release, this meant I needed to change the default text color on many of the buttons to ensure a minimum of AA compliance with [(WCAG 2.0)](https://usecontrast.com/guide).
+As long as the button has the base `.press` class, you can use any CSS selector to extend Press.css and customize a button. [(CodePen Demo)](https://codepen.io/codyogden/pen/eRqgba)
+```css
+.btn-main {
+	--p: #6967AB;
+	color: #FFF;
+}
+```
 
-If `color: #FFF` would cause a color ratio to fall below a 4.5 ratio, it will default to a black color instead. Colors can easily be overridden with normal CSS with the following:
+## Accessibility First
+
+I wanted to ensure that Press.css adheres as close as possible to web accessibility standards. My goal was to keep all 21 colors from version 1, but ensure color contrast guidelines are met. In order to do that, I evaluate each color as a background with white text, and if the color ratio falls below a 4.5 (AA), then the text color will be black. You can learn more about color contrast in [this handy introductory guide](https://usecontrast.com/guide).
+
+Fear not! If you would like for all colors to default to white, use this handy class in your CSS to override that assumption.
 ```css
 .press:not(.press-ghost) {
     color: #FFF;
