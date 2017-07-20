@@ -74,4 +74,23 @@ The SCSS file is pretty straightforward, but I thought I would leaves some quick
 
 ### Adding/Removing Colors:
 
-The colors are created via a SCSS key/value map, `$colors`. SASS will throw interpolation warnings and errors. To prevent this, always place the key as a string (wrap it in quotes `"`) *especially* if you are using color names used in HTML (e.g. blue, green, red, orange).
+Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property.
+```css
+.press-love {
+	--p: pink;
+        color: red;
+}
+```
+
+## Accessibility First
+Now that you can easily add new and custom colors to Press.css, I wanted to ensure that Press.css adheres as close as possible to web accessibility standards. While I was able to keep all the original button colors from the original release, this meant I needed to change the default text color on many of the buttons to ensure a minimum of AA compliance with [(WCAG 2.0)](https://usecontrast.com/guide).
+
+If `color: #FFF` would cause a color ratio to fall below a 5.0 (AA is 4.5), it will default to a black color instead. Colors can easily be overridden with normal CSS with the following:
+```css
+.press:not(.press-ghost) {
+    color: #FFF;
+}
+```
+
+## Browser Support
+I have tested the library as is in modern Chrome, Safari, and Firefox.
