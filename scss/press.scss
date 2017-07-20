@@ -67,7 +67,7 @@
 		background-color: var(--a);
 	}
 	&-ghost:hover:not(:disabled) {
-		color: #FFF;
+		color: var(--c);
 	}
 
 	// Sizes
