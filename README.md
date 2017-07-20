@@ -74,7 +74,7 @@ The SCSS file is pretty straightforward, but I thought I would leaves some quick
 
 ### Adding/Removing Colors:
 
-Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property.
+Press.css is now extendable without the need for using or compiling with Sass! In addition to the default colors, you can create your own custom classes with the `press-[class]` format and a special CSS custom property. ([Codepen](https://codepen.io/codyogden/pen/pwXXQG))
 ```css
 .press-love {
 	--p: pink;
