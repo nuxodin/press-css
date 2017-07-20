@@ -18,6 +18,12 @@ a.press {
 	padding: 0.5em 0.75em;
 	text-decoration: none;
 	transition: background 0.15s linear;
+	&:hover:not(:disabled) {
+		background-color: var(--h);
+	}
+	&:active:not(:disabled) {
+		background-color: var(--a);
+	}
 
 	// Color Loop
 	@each $color, $hex in $colors {
@@ -28,12 +34,8 @@ a.press {
 			} @else {
 				--c: #000;
 			}
-			&:hover:not(:disabled) {
-				background-color: lighten($hex, 5%);
-			}
-			&:active:not(:disabled) {
-				background-color: darken($hex, 10%);
-			}
+			--h: lighten($hex, 5%);
+			--a: darken($hex, 10%);
 		}
 	}
 
@@ -66,7 +68,6 @@ a.press {
 	}
 	&-ghost:hover:not(:disabled) {
 		color: #FFF;
-		background-color: var(--p);
 	}
 
 	// Sizes
