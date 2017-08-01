@@ -20,14 +20,14 @@
 	// Color Loop
 	@each $color, $hex in $colors {
 		&-#{$color} {
-			--p: $hex;
+			--p: #{$hex};
 			@if(color_contrast(#FFF, $hex) > 4.5) {
 				--c: #FFF;
 			} @else {
 				--c: #000;
 			}
-			--h: lighten($hex, 5%);
-			--a: darken($hex, 10%);
+			--h: #{lighten($hex, 5%)};
+			--a: #{darken($hex, 10%)};
 		}
 	}
 
