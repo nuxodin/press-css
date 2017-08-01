@@ -3,7 +3,7 @@
 	// https://css-tricks.com/snippets/sass/power-function/#article-header-id-2
   $value: 1;
   @if $exponent > 0 {
-    @for $i from 1 through $exponent {
+    @for $i from 1 through round($exponent) {
       $value: $value * $number;
     }
   } @else if $exponent < 0 {
