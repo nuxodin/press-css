@@ -18,7 +18,7 @@
 	transition: background 0.15s linear;
 
 	// Color Loop
-	@each $color, $hex in $colors {
+	@each $color, $hex in $press-css-colors {
 		&-#{$color} {
 			--p: #{$hex};
 			@if(color_contrast(#FFF, $hex) > 4.5) {
