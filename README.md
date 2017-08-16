@@ -3,10 +3,23 @@ Press.css is a flat, lightweight, scalable, no bullshit button library for your 
 
 ## Ways to Use
 
+
+### Link It Up
 Download Press.css and add a link to the stylesheet in the `head` of your document.
 
 ```html
 <link rel="stylesheet" href="press.css" />
+```
+
+### NPM
+Press.css was just added to the NPM registry.
+
+```shell
+npm install press-css
+```
+
+```shell
+yarn add press-css
 ```
 
 ## The Markup
