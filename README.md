@@ -45,9 +45,9 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 ## Features
 
-**Check out the [Press.css](http://codyo.me/press) to see these features in action.**
+**Check out the [Press.css](https://press-css.io) to see these features in action.**
 
-### [Button Shapes](http://codyo.me/press/#shapes)
+### [Button Shapes](https://press-css.io/#shapes)
 
 *(default)* - If you do not specify a shape, Press.css will create a squared button.
 
@@ -57,7 +57,7 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *.press-circle* - Perfect for glyphicons or numbers. Too much content will be hidden.
 
-### [Button Sizes](http://codyo.me/press/#sizes)
+### [Button Sizes](https://press-css.io/#sizes)
 
 *.press-sm* - Equivalent of `font-size:.8em;`
 
@@ -67,7 +67,7 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *.press-xl* - Equivalent of `font-size:1.5em;`
 
-### [Button Effects](http://codyo.me/press/#effects)
+### [Button Effects](https://press-css.io/#effects)
 
 *.press-raised* - Adds a slight border-shadow to the button
 
@@ -75,9 +75,9 @@ You can even use anchor elements to make a link look like a Press.css button:
 
 *:disabled* - Press.css uses the disabled attribute on `button` elements.
 
-### [Button Colors](http://codyo.me/press/#colors)
+### [Button Colors](https://press-css.io/#colors)
 
-Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](http://codyo.me/press/#colors) in their style guide are used by default in Press.css.
+Press.css borrows heavily from the design specs of Google's Material Design. All the [color names](https://press-css.io/#colors) in their style guide are used by default in Press.css.
 
 **Note:** There is a `.press-yellow` and a `.press-white` class that defaults to `color: #FFF`. Overwrite this class anywhere below where you add Press.css to give the text a contrasting color.
 
