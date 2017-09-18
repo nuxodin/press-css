@@ -9,7 +9,8 @@
   "author": "Cody Ogden <cody@codyogden.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node-sass --output-style compressed ./scss/press.scss ./css/press.css"
+    "build": "node-sass --output-style compressed ./scss/_import-now.scss ./css/press.css",
+    "dev": "node-sass ./scss/_import-now.scss ./css/press.css"
   },
   "devDependencies": {
     "abbrev": "^1.1.0",

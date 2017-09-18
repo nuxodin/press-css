@@ -1,9 +1,21 @@
-// Functions
-@import 'functions';
+// Global Default Variables
+$press-text-color: #fff !default;
+$press-text-alt: #000 !default;
+
 // Colors
 @import 'colors';
 
-.press {
+// Functions
+@import 'functions';
+
+/**
+ * Press.css Mixin
+ * @param  {boolean} $testContrast: true            True/False: the mixin should test the contrast of the background color.
+ * @param  {color} $textColor: $press-text-color 	(Optional) Set a default text color.
+ * @return {mixin}                					Returns the mixin and sub-classes.
+ */
+@mixin press( $testContrast: true, $textColor: $press-text-color ) {
+
 	// Base
 	box-sizing: border-box;
 	background-color: var(--p);
@@ -22,11 +34,7 @@
 	@each $color, $hex in $press-css-colors {
 		&-#{$color} {
 			--p: #{$hex};
-			@if(color_contrast(#FFF, $hex) > 4.5) {
-				--c: #FFF;
-			} @else {
-				--c: #000;
-			}
+			--c: if( $testContrast, press_test_contrast($hex, $textColor), $textColor );
 			--h: #{lighten($hex, 5%)};
 			--a: #{darken($hex, 10%)};
 		}
