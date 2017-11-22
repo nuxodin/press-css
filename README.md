@@ -1,5 +1,5 @@
 # Press.css
-Press.css is a flat, lightweight, scalable, no bullshit button library for your projects that is heavily influenced by [Google's Material Design](https://www.google.com/design/) guidelines. It's markup is simple, easy to use and predictable and helps ensure a uniform button experience across all pages of your site or app.
+Press.css is a flat, lightweight, scalable, no bullshit button library for your projects that is heavily influenced by [Google's Material Design](https://www.google.com/design/) guidelines. It's markup is simple, easy to use, predictable, and helps ensure a uniform button experience across all pages of your site or app.
 
 ## Ways to Use
 
