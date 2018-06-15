@@ -34,7 +34,7 @@ $press-text-alt: #000 !default;
 	@each $color, $hex in $press-css-colors {
 		&-#{$color} {
 			--p: #{$hex};
-			--c: if( $testContrast, press_test_contrast($hex, $textColor), $textColor );
+			--c: #{if( $testContrast, press_test_contrast($hex, $textColor), $textColor )};
 			--h: #{lighten($hex, 5%)};
 			--a: #{darken($hex, 10%)};
 		}
