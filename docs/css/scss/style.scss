@@ -1,0 +1,45 @@
+$colors: (
+	"red": #F44336,
+	"pink": #E91E63,
+	"purple": #9C27B0,
+	"deeppurple": #673AB7,
+	"indigo": #3F51B5,
+	"blue": #2196F3,
+	"lightblue": #03A9F4,
+	"cyan": #00BCD4,
+	"teal": #009688,
+	"green": #4CAF50,
+	"lightgreen": #BBC34A,
+	"lime": #CDDC39,
+	"yellow": #FFEB3B,
+	"amber": #FFC107,
+	"orange": #FF9800,
+	"deeporange": #FF5722,
+	"brown": #795548,
+	"grey": #9E9E9E,
+	"bluegrey": #607D8B,
+	"black": #000000,
+	"white": #FFFFFF
+);
+
+/* latin */
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v7/10JVD_humAd5zP2yrFqw6hampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@import "press";
+@import "structure";
+@import "sidebar";
+@import "theme";
+@import "colorwheel";
+
+body {
+  margin:0;
+  padding:0;
+  background-color:#FAFAFA;
+  font-family: 'Helvetica','Verdana','Arial', sans-serif;
+}

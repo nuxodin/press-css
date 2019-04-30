@@ -1,0 +1,84 @@
+.psst {
+  font-family: 'Indie flower', sans-serif;
+  width:200px;
+  font-size:1.5em;
+  text-align:center;
+  box-sizing:border-box;
+  padding:.5em;
+  position:absolute;
+  //top:200px;
+  left:120px;
+  transform:rotate(-8deg);
+}
+
+@media screen and (max-width:800px) {
+  .psst {
+    display:none;
+  }
+}
+
+.sidebar {
+  font-weight:lighter;
+  height:100vh;
+  margin:0;
+  padding:0;
+  position:fixed;
+  float:left;
+  width:120px;
+  display:flex;
+  overfow:hidden;
+  flex-direction:column;
+}
+
+.sidebar > .color-option {
+  flex-grow:1;
+  min-height:1.25em;
+  position:relative;
+  display:flex;
+  align-content:center;
+  justify-content: center;
+  align-items:center;
+}
+
+@each $color, $hex in $colors {
+  .bg-#{$color} {
+    background-color:$hex;
+  }
+}
+
+.sidebar > div[class^="bg-"] {
+  min-width:40px;
+  width:40px;
+  vertical-align: middle;
+  text-align:center;
+  box-sizing:border-box;
+  word-wrap: normal;
+  white-space: nowrap;
+  overflow:hidden;
+  transition: width 0.25s linear;
+  &:hover {
+    width:120px;
+    > span {
+      opacity:1;
+    }
+  }
+  > span {
+    color:#FAFAFA;
+    opacity:0;
+    transition: opacity 0.25s linear;
+  }
+}
+
+.selected {
+  width:120px !important;
+  position:relative;
+  > span {
+    opacity:1 !important;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .sidebar {
+    display:none;
+  }
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="UTF-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Press.css - A flat, lightweight, no bullshit button library.</title>
+	  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="prism.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $(".color-option").on("click",function(){
+        $(".psst").fadeOut(100);
+        var oldcolor = $(".selected").data("press");
+        var color = $(this).data("press");
+        $(".color-option").removeClass("selected");
+        $(".press-"+oldcolor).not("footer .press").removeClass("press-"+oldcolor);
+        $("section .press").not("footer .press").addClass("press-"+color);
+        $(this).addClass("selected");
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+      <div class="psst">&lt;--- Hey, you! Pick a color to change all the buttons on this page!</div>
+      <div class="sidebar">
+        <div class="bg-red color-option selected" data-press="red"><span>Red</span></div> 
+        <div class="bg-pink color-option" data-press="pink"><span>Pink</span></div> 
+        <div class="bg-purple color-option" data-press="purple"><span>Purple</span></div> 
+        <div class="bg-deeppurple color-option" data-press="deeppurple"><span>Deep Purple</span></div> 
+        <div class="bg-indigo color-option" data-press="indigo"><span>Indigo</span></div> 
+        <div class="bg-blue color-option" data-press="blue"><span>Blue</span></div> 
+        <div class="bg-lightblue color-option" data-press="lightblue"><span>Light Blue</span></div> 
+        <div class="bg-cyan color-option" data-press="cyan"><span>Cyan</span></div> 
+        <div class="bg-teal color-option" data-press="teal"><span>Teal</span></div> 
+        <div class="bg-green color-option" data-press="green"><span>Green</span></div> 
+        <div class="bg-lightgreen color-option" data-press="lightgreen"><span>Light Green</span></div> 
+        <div class="bg-lime color-option" data-press="lime"><span>Lime</span></div> 
+        <div class="bg-yellow color-option" data-press="yellow"><span>Yellow</span></div> 
+        <div class="bg-amber color-option" data-press="amber"><span>Amber</span></div> 
+        <div class="bg-orange color-option" data-press="orange"><span>Orange</span></div> 
+        <div class="bg-deeporange color-option" data-press="deeporange"><span>Deep Orange</span></div> 
+        <div class="bg-brown color-option" data-press="brown"><span>Brown</span></div> 
+        <div class="bg-grey color-option" data-press="grey"><span>Grey</span></div> 
+        <div class="bg-bluegrey color-option" data-press="bluegrey"><span>Blue Grey</span></div> 
+        <div class="bg-black color-option" data-press="black"><span>Black</span></div> 
+      </div>
+    
+      <main>
+    
+        <header>
+        
+          <h1>Press.css</h1>
+          
+          <p>Press.css is a flat, lightweight, scalable, no bullshit button library for your projects influenced by <a href="https://www.google.com/design/" title="Google's Material Design Guide">Google's Material Design</a> guidelines. The markup is simple, easy to use and predictable and helps ensure a uniform button experience across all pages of your site or your app.</p>
+        
+        </header>
+        
+        <section id="markup">
+        
+          <h2>Markup</h2>
+          
+          <p>The markup for press buttons is simple: use an <code class="lang-markup">a</code> or <code class="lang-markup">button</code> element and add the desired classes. It sounds simple, but then it gets even more simple. It's like simple squared. So it seems complex, but it's not.<br/><br/>
+
+          At the very minimum, you need the <code class="lang-css">.press</code> and <code class="lang-css">.press-[color]</code> classes:</p>
+
+          <pre class="lang-markup card"><code>&lt;button class="press press-red"&gt;Square Button&lt;/button&gt;</code></pre>
+
+          <p>You can have more fun with it as well:</p>
+        
+          <pre class="lang-markup card"><code>&lt;button class="press press-bluegrey press-round press-ghost press-xl"&gt;Round Button&lt;/button&gt;</code></pre>
+        
+        </section>
+        
+        <section id="shapes">
+        
+          <h2>Button Shapes</h2>
+          
+          <div class="row">
+          
+            <div class="card div-25">
+            
+              <div class="text-center">
+                          
+                <button class="press press-red">Square Button</button>
+                                               
+              </div>
+              
+              <div class="text-center">
+                
+                <p><em class="classname">(default)</em></p>
+              
+                <p>This classic squared button is sharp as a knife. Be careful or you'll cut yourself on those sharp corners.</p>
+              
+              </div>
+            
+            </div>
+            
+            <div class="card div-25">
+            
+              <div class="text-center">
+                          
+                <button class="press press-red press-round">Round Button</button>
+                                               
+              </div>
+              
+              <div class="text-center">
+                
+                <p><em class="classname">.press-round</em></p>
+              
+                <p>The much softer brother to the square button, round buttons are friendly and happy to be pressed.</p>
+              
+              </div>
+            
+            </div>
+            
+            <div class="card div-25">
+            
+              <div class="text-center">
+                          
+                <button class="press press-red press-pill">Pill Button</button>
+                                               
+              </div>
+              
+              <div class="text-center">
+                
+                <p><em class="classname">.press-pill</em></p>
+              
+                <p>These pill-shaped, medicinal buttons are hard to swallow, but it will remind your user to take their meds.</p>
+              
+              </div>
+            
+            </div>
+            
+            <div class="card div-25">
+            
+              <div class="text-center">
+                          
+                <button class="press press-red press-circle"><i class="fa fa-heart"></i></button>
+                                               
+              </div>
+              
+              <div class="text-center">
+                
+                <p><em class="classname">.press-circle</em></p>
+              
+                <p>Circle buttons are perfect for your favorite glyphicons or numbers! Too much content will disappear. :'(</p>
+              
+              </div>
+            
+            </div>
+          </div>
+        
+        </section>
+        
+        <section id="sizes">
+        
+          <h2>Button Sizes</h2>
+          
+          <p>Deep down, we all know that size <em>does</em> matter. Press.css sizes are based on <code class="lang-css">font-size: 1em;</code>. Need a different size? Add it in SASS.<br/><br/>Don't know how to SASS? Well, I am sorry to inform you that I'm not the genie from Aladdin and I don't make wishes come true.<br/><br/><em>You ain't never had a friend like me.</em></p>
+          
+          <div class="sizes row nowrap card">
+            
+            <div class="div-20"><em class="classname">.press-sm</em></div>
+            <div class="div-20"><button class="press press-red press-sm">Small Square</button></div>
+            <div class="div-20"><button class="press press-red press-round press-sm">Small Round</button></div>
+            <div class="div-20"><button class="press press-red press-pill press-sm">Small Pill</button></div>
+            <div class="div-20"><button class="press press-red press-circle press-sm"><i class="fa fa-info"></i></button></div>
+          
+          </div>
+          
+          <div class="sizes row nowrap card">
+            
+            <div class="div-20"><em class="classname">(default)</em></div>
+            <div class="div-20"><button class="press press-red">Default Square</button></div>
+            <div class="div-20"><button class="press press-red press-round">Default Round</button></div>
+            <div class="div-20"><button class="press press-red press-pill">Default Pill</button></div>
+            <div class="div-20"><button class="press press-red press-circle"><i class="fa fa-info"></i></button></div>
+          
+          </div>
+          
+          <div class="sizes row nowrap card">
+            
+            <div class="div-20"><em class="classname">.press-lg</em></div>
+            <div class="div-20"><button class="press press-red press-lg">Large Square</button></div>
+            <div class="div-20"><button class="press press-red press-round press-lg">Large Round</button></div>
+            <div class="div-20"><button class="press press-red press-pill press-lg">Large Pill</button></div>
+            <div class="div-20"><button class="press press-red press-circle press-lg"><i class="fa fa-info"></i></button></div>
+          
+          </div>
+          
+          <div class="sizes row nowrap card">
+            
+            <div class="div-20"><em class="classname">.press-xl</em></div>
+            <div class="div-20"><button class="press press-red press-xl">XL Square</button></div>
+            <div class="div-20"><button class="press press-red press-round press-xl">XL Round</button></div>
+            <div class="div-20"><button class="press press-red press-pill press-xl">XL Pill</button></div>
+            <div class="div-20"><button class="press press-red press-circle press-xl"><i class="fa fa-info"></i></button></div>
+          
+          </div>
+        
+        </section>
+        
+        <section id="effects">
+        
+          <h2>Button Effects</h2>
+          
+          <p>Other libraries have a ton of effects, horse buttons...buttons on fire...<br/>...oh gah...make it stop... Press.css keeps it simple and has only three effects. This reduces the amount of code the browser must load and keeps thing as flat/materialistic as digitally possible.</p>
+          
+          <div class="row nowrap effects">
+          
+            <div class="card">
+            
+              <div class="text-center"><button class="press press-red press-raised">Raised Button</button></div>
+              
+              <div class="text-center">
+              
+                <p><em class="classname">.press-raised</em></p>
+                
+                <p>Press.css can make things float above the page, but like a crappy magician working for tips at a strip mall near you: it still can't magically tell you your card. (Ace of Spades. No? Fine.)</p>
+              
+              </div>
+              
+              <div class="effects-example text-center">
+              
+                <button class="press press-red press-raised">Square Raised</button><br/>
+                <button class="press press-red press-round press-raised">Round Raised</button><br/>
+                <button class="press press-red press-pill press-raised">Pill Raised</button><br/>
+                <button class="press press-red press-circle press-raised"><i class="fa fa-plus"></i></button><br/>
+              
+              </div>
+            
+            </div>
+
+                        <div class="card">
+            
+              <div class="text-center"><button class="press press-red press-ghost">Ghost Button</button></div>
+              
+              <div class="text-center">
+              
+                <p><em class="classname">.press-ghost</em></p>
+                
+                <p>Spooky! Ghost buttons are inversions of the regular buttons, but when hovered and clicked look nearly identical. Just add the ghost class to give a good "Boo!"</p>
+              
+              </div>
+              
+              <div class="effects-example text-center">
+              
+                <button class="press press-red press-ghost">Square Ghost</button><br/>
+                <button class="press press-red press-round press-ghost">Round Ghost</button><br/>
+                <button class="press press-red press-pill press-ghost">Pill Ghost</button><br/>
+                <button class="press press-red press-circle press-ghost"><i class="fa fa-fire-extinguisher"></i></button><br/>
+              
+              </div>
+            
+            </div>
+            
+                        <div class="card">
+            
+              <div class="text-center"><button class="press press-red" disabled>Disabled Button</button></div>
+              
+              <div class="text-center">
+              
+                <p><em class="classname">:disabled</em></p>
+                
+                <p>Press.css uses the already existing CSS selectors for buttons. No classes need to be added or removed, just change the HTML disable attribute to prevent a nuclear meltdown.</p>
+              
+              </div>
+              
+              <div class="effects-example text-center">
+              
+                <button class="press press-red" disabled>Disabled Button</button><br/>
+                <button class="press press-red press-round press-raised" disabled>Raised Disabled</button><br/>
+                <button class="press press-red press-pill press-ghost" disabled>Ghost Disabled</button><br/>
+                <button class="press press-red press-circle" disabled><i class="fa fa-leaf"></i></button><br/>
+              
+              </div>
+            
+            </div>
+          
+          </div>
+        
+        </section>
+        
+        <section id="colors">
+        
+          <h2>Button Colors</h2>
+          
+          <p>Press.css comes with 21 default colors. "But 21 colors is not enough! I need all the colors." Well, good news! Extending Press.css is as easy as <a href="https://github.com/codyogden/press-css#addingremoving-colors" title="Extending Press.css instructions">adding an additional CSS rule</a>.</p>
+          
+            <div class="color-wheel">
+              <div class="bg-red"><span>.press-red</span></div> 
+              <div class="bg-pink"><span>.press-pink</span></div> 
+              <div class="bg-purple"><span>.press-purple</span></div> 
+              <div class="bg-deeppurple"><span>.press-deeppurple</span></div> 
+              <div class="bg-indigo"><span>.press-indigo</span></div> 
+              <div class="bg-blue"><span>.press-blue</span></div> 
+              <div class="bg-lightblue"><span>.press-lightblue</span></div> 
+              <div class="bg-cyan"><span>.press-cyan</span></div> 
+              <div class="bg-teal"><span>.press-teal</span></div> 
+              <div class="bg-green"><span>.press-green</span></div>
+              <div class="bg-lightgreen"><span>.press-lightgreen</span></div> 
+              <div class="bg-lime"><span>.press-lime</span></div> 
+              <div class="bg-yellow"><span>.press-yellow</span></div> 
+              <div class="bg-amber"><span>.press-amber</span></div> 
+              <div class="bg-orange"><span>.press-orange</span></div> 
+              <div class="bg-deeporange"><span>.press-deeporange</span></div> 
+              <div class="bg-brown"><span>.press-brown</span></div> 
+              <div class="bg-grey"><span>.press-grey</span></div> 
+              <div class="bg-bluegrey"><span>.press-bluegrey</span></div> 
+              <div class="bg-black"><span>.press-black</span></div> 
+          </div>
+        
+        </section>
+        
+        <section id="download">
+        
+          <h2>Download</h2>
+          
+          <div class="row">
+          
+            <div class="card download sizes">
+              
+              <div class="text-center"><a href="press-2.0.8.css" class="press press-red press-round"><i class="fa fa-download"></i> CSS File</a></div>
+            
+              <div class="text-center">
+                
+                <p><em class="classname">&lt; 3 KB - Small and mighty.</em></p>
+              
+                <p>Press.css in a compiled, minified format with all the shapes, sizes, features and colors.</p>
+                
+                <p>PS: Works great with normalize.css</p>
+              
+              </div>
+            
+            </div>
+            
+            <div class="card download sizes">
+              
+              <div class="text-center"><a href="https://github.com/codyogden/press-css" class="press press-round press-red"><i class="fa fa-github"></i> Source Files</a></div>
+              
+              <div class="text-center">
+              
+                <p><em class="classname">Repo on Github</em></p>
+                
+                <p>The source and the compiled file are available in a convenient Github repository.</p>
+                
+                <p>Fork me so hard.</p>
+              
+              </div>
+            
+            </div>
+          
+          </div>
+        
+        </section>
+        
+        <section id="roadmap">
+        
+          <h2>Roadmap</h2>
+          
+          <p><em>Buttons are only the beginning.</em></p>
+          
+          <p>At this point, Press.css will focus on individual web components, like buttons. Eventually, Press.css will expand its scope to become more of a pick-and-choose style guide without a grid to keep the CSS file small and as flexible as possible (i.e. use your preferred grid system).</p>
+          
+          <p><strong>TL;DR: There is more to come.</strong></p>
+        
+        </section>
+    
+        <footer class="text-center">
+          
+          
+        
+          <a href="https://codyogden.com" class="press press-bluegrey">Created by Cody Ogden.</a>
+        
+        </footer>
+        
+    </main>
+  
+  </body>
+
+</html>
