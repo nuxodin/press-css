@@ -13,7 +13,7 @@
     "dev": "node-sass ./scss/_import-now.scss ./css/press.css"
   },
   "dependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.12.0"
   },
   "bugs": {
     "url": "https://github.com/codyogden/press-css/issues"
